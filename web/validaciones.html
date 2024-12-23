@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ataque a los Titanes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            background-color: #003366;
+            color: white;
+            padding: 1rem 0;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #003366;
+            font-weight: bold;
+        }
+        section {
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        .marquee-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .marquee {
+            display: flex;
+            gap: 20px;
+            animation: scroll 15s linear infinite;
+        }
+        .marquee img {
+            max-height: 200px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .marquee img:hover {
+            transform: scale(1.1);
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #003366;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fanpage: Ataque a los Titanes</h1>
+    </header>
+
+    <nav>
+        <a href="#seccion1">Sección 1</a>
+        <a href="#seccion2">Sección 2</a>
+        <a href="#seccion3">Sección 3</a>
+    </nav>
+
+    <section id="seccion1">
+        <h2>Galería con Efecto Marquee</h2>
+        <div class="marquee-container">
+            <div class="marquee">
+                <!-- Asegúrate de que las rutas de las imágenes sean correctas -->
+                <img src="tam/a1.jpg" alt="Imagen 1">
+                <img src="tam/b1.jpg" alt="Imagen 2">
+                <img src="tam/c1.jpg" alt="Imagen 3">
+                <img src="tam/d1.jpg" alt="Imagen 4">
+                <img src="tam/e1.jpg" alt="Imagen 5">
+            </div>
+        </div>
+    </section>
+
+    <section id="seccion2">
+        <h2>Sección de Video</h2>
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/yKsGmByxLD8" 
+            title="Video 1" 
+            allowfullscreen></iframe>
+        <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/dLiu12rQrxM" 
+            title="Video 2" 
+            allowfullscreen></iframe>
+    </section>
+
+    <section id="seccion3">
+        <h2>Google Sheets</h2>
+        <iframe 
+            src="https://docs.google.com/spreadsheets/d/1sV-riMrkdOnL2oHARPl0v0RJbSkbr_Q5kDRmsdcSe1Y/pubhtml?widget=true&amp;headers=false" 
+            width="1000" 
+            height="400"></iframe>
+    </section>
+
+    <footer>
+        <p>© 2024 Fanpage Ataque a los Titanes. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

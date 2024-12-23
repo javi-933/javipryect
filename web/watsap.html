@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Integration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #25D366;
+        }
+        form {
+            margin: 20px 0;
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #25D366;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1da851;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Integración con WhatsApp</h1>
+    <form id="whatsappForm">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required placeholder="Ingresa tu nombre">
+        
+        <label for="phone">Número de celular:</label>
+        <input type="tel" id="phone" name="phone" required placeholder="Ej: +591XXXXXXXXX">
+        
+        <label for="option">Elige una opción:</label>
+        <select id="option" name="option" required>
+            <option value="">Selecciona una opción</option>
+            <option value="Agendar cita">Agendar cita</option>
+            <option value="Reclamos">Reclamos</option>
+            <option value="Contactanos">Contactanos</option>
+        </select>
+        
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <iframe id="whatsappIframe" src="https://web.whatsapp.com" title="WhatsApp"></iframe>
+    
+    <script>
+        document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const phone = "59175883458"; // Reemplaza 591XXXXXXXXX con tu número de celular incluyendo el código del país
+            const option = document.getElementById('option').value;
+            
+            if (!name || !option) {
+                alert('Por favor, completa todos los campos.');
+                return;
+            }
+            
+            const message = `Hola, soy ${name}. Quiero ${option}.`;
+            const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            
+            // Abrir el enlace en una nueva pestaña
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+    
+</body>
+</html>

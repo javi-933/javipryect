@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Yagami - Death Note</title>
+    <style>
+        /* Estilo General */
+        body {
+        margin: 0;
+        font-family: 'Raleway', sans-serif;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('C:/Users/PC/Desktop/diseño/akira/a1.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #fff;
+        scroll-behavior: smooth;
+    }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.9); /* Fondo sólido sin transparencia */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        header:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-align: center;
+            color: #f00;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #f00;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        /* Navegación */
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f00;
+            transform: scale(1.1);
+        }
+
+        /* Botones y enlaces */
+        .back-to-top {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #f00;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.3s, background 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background: #900;
+            transform: scale(1.1);
+        }
+
+       /* Secciones */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+    scroll-margin-top: 0; /* Ajusta el margen al desplazarse */
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    margin-top: 0; /* Elimina el espacio superior */
+    margin-bottom: 0; /* Elimina el espacio inferior */
+}
+
+
+        .section:hover {
+            transform: translateY(-10px);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #f00;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        /* Galería */
+        .carousel img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .carousel img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Videos */
+        .video-container iframe {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease;
+        }
+
+        .video-container iframe:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 0;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            .carousel img {
+                width: 100px;
+            }
+        }
+
+        /* Fondo efecto carrusel */
+        .background-carousel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .background-carousel img {
+            min-width: 100%;
+            min-height: 100%;
+            animation: slide 20s infinite;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100vh; /* Ocupa toda la altura de la pantalla */
+            flex-direction: row;
+        }
+
+        .video-container, .text-container {
+            flex: 1; /* Ocupa todo el ancho disponible */
+            height: 100%;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+        textarea {
+            width: 100%;
+            height: 45%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fondo con efecto carrusel -->
+    
+    <header>
+        <h1>Light Yagami - Death Note</h1>
+    </header>
+
+    <!-- Galería -->
+     <br>
+     <br>
+     <br>
+     <br>
+    <div class="carousel" style="text-align: center;">
+        <marquee behavior="scroll" direction="left" scrollamount="5">
+            <img src="C:/Users/PC/Desktop/diseño/logo.jpg" alt="Inicio de la serie" class="gallery-img" data-target="reseña-akira">
+            
+            <img src="C:/Users/PC/Desktop/diseño/akira/a3.jpg" alt="L descubre la verdad" class="gallery-img" data-target="reseña-L">
+            <img src="C:/Users/PC/Desktop/diseño/akiravsl.jpg" alt="Comienza la caza de Akira" class="gallery-img" data-target="reseña-akira-vs-L">
+            <img src="C:/Users/PC/Desktop/diseño/akira/a2.jpg" alt="Los Shinigamis observando a Akira" class="gallery-img" data-target="reseña-shinigamis">
+            
+            <img src="C:/Users/PC/Desktop/diseño/akira.jpg" alt="Misa posee otra Death Note" class="gallery-img" data-target="reseña-misa">
+        </marquee>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#biografia">Biografía</a></li>
+            <li><a href="#imagenes">Enlace</a></li>
+            <li><a href="index.html" class="nav-button">Volver a Principal</a></li>
+        </ul>
+    </nav>
+
+    <section id="biografia">
+        <h2>Biografía</h2>
+        <div class="container">
+            <div class="video-container">
+                <video controls>
+                    <source src="C:\Users\PC\Desktop\diseño\akira\akira.mp4" type="video/mp4">
+                   
+                </video>
+            </div>
+            <div class="text-container">
+                <textarea rows="10" placeholder="Escribe aquí...">
+                    Light Yagami es un estudiante de 17 años con el mejor promedio académico de todo Japón. Es un hijo modelo y un buen estudiante, posee una gran genialidad, educado, correcto, narcisista y egocéntrico. No tiene mucha vida social, pues sacrifica todos sus ratos libres estudiando.
+    
+                    Frustrado por la falta de justicia en el mundo piensa que el mundo está podrido y desea conseguir un medio por el cual pueda promulgar su voluntad de purgar al mundo de todos los males. Todo cambia cuando descubre en el suelo de su escuela un misterioso cuaderno llamado "Death Note", que un shinigami (dios de la muerte) llamado Ryuk ha dejado caer "accidentalmente" en la Tierra.
+    
+                    El Death Note (Cuaderno de la Muerte) tiene la capacidad de matar a las personas si se escribe el nombre de la persona que se quiere matar teniendo en mente su rostro. Si después de 40 segundos no se ha especificado la muerte del sujeto, este morirá de un ataque al corazón, causándole una muerte inmediata. Si se especifica a continuación del nombre una causa de muerte, se dispone de 6 minutos y 40 segundos para detallar las circunstancias de la muerte. Además, la causa de muerte debe entrar dentro de la lógica y lo posible.
+    
+                    En un principio Light es escéptico de la autenticidad del cuaderno, pero después de experimentar con él, se da cuenta de que la Death Note es real. Es de esta manera que Light Yagami encuentra su verdadero propósito en la vida: convertirse en la justicia que cambie el mundo y la historia, creando una utopía libre de toda gente malvada. Light siente que es la única persona en condiciones de juzgar a la humanidad, por lo que decide crear un nuevo mundo donde solo él será "dios". Después de la reunión con el anterior propietario de la Death Note, un shinigami llamado Ryuk, Light pretende controlar el mundo con la regla divina, de juzgar a aquellos que considere que vayan por el mal camino, o que obstruyan sus objetivos.
+    
+                    Gracias a esto, Light bajo el anonimato del apodo "Kira" (por su parecido fonético a "killer" en inglés), se hace famoso en el mundo. Todo esto hace que Light comience a sentirse como un dios y así crear su propio mundo ideal en el que prospere la paz.
+    
+                    Los planes de Light se ven truncados con la aparición de L, el detective más famoso del mundo, que intentará por todos los medios detener a Kira y a su purga indiscriminada de criminales.
+    
+                    Ante toda esta situación, Light mantiene su habitual calma y paciencia, sometiendo cualquier emoción o inconveniente, como el miedo, la frustración o sorpresa, a merced de su razón. Esto se puede ver cuando L, al sospechar que Light es Kira, se inscribe en la Universidad To-Oh, donde Light cursa estudios, y sin más, se le presenta diciéndole: "Light Yagami... yo soy L". Light, quien no se esperaba ese movimiento, decide actuar de forma calmada frente a L. Pero, después, se puede ver como en realidad está afectado al mostrarse completamente fuera de sí en su habitación, para después retomar la calma y trazar una estrategia.
+    
+                    Una vez que aparece un segundo Kira, (Misa Amane), L se ve envuelto en muchas dudas. Después que Misa renunciara a la Death Note brevemente para borrar sus recuerdos, Light es capaz de manipular a Rem, la shinigami del cuaderno de Misa. Cuando L intenta poner a prueba la Death Note, Rem se da cuenta de que ha sido atrapada por Light. Es así como es forzada a una situación en la que debe elegir: dejar que capturen de Misa, o su propia existencia como shinigami. En el último momento, Rem mata a L y a Watari, su sirviente, para luego morir, dejando su Death Note a disposición de Light.
+    
+                    Con L muerto, Light toma la posesión de su mando para ocultar la muerte de L al mundo, convirtiéndose así en "el Segundo L", al mismo tiempo consiguiendo la posición perfecta para continuar matando a los delincuentes como Kira.
+                </textarea>
+            </div>
+        </div>
+    </section>
+   <!-- Links Section -->
+<section id="imagenes" class="section">
+    <div class="container" style="max-width: 900px; margin: auto; font-family: Arial, sans-serif;">
+
+        <h2 style="text-align: center; margin-bottom: 20px;">Enlaces para más contenidos en la web</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+
+            <!-- Enlace 1 -->
+            <div style="text-align: left;">
+                <a href="https://manga-y-anime.fandom.com/es/wiki/Death_Note" target="_blank" style="
+                    display: inline-block;
+                    padding: 12px 20px;
+                    background: #1abc9c;
+                    color: white;
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                    text-decoration: none;
+                    border-radius: 25px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    transition: all 0.3s ease-in-out;
+                ">Wiki de Death Note - Manga y Anime</a>
+                <p style="margin-top: 10px;">Explora información detallada sobre la serie, sus personajes, y su impacto en el mundo del anime.</p>
+            </div>
+            <img src="C:/Users/PC/Desktop/diseño/akira/a6.jpg" alt="Wiki de Death Note" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+
+            </div>
+        
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Death Note Fans. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

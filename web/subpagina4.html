@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misa - Death Note</title>
+    <style>
+        /* Estilo General */
+        body {
+        margin: 0;
+        font-family: 'Raleway', sans-serif;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('C:/Users/PC/Desktop/diseño/misa/m7.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #fff;
+        scroll-behavior: smooth;
+    }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.9); /* Fondo sólido sin transparencia */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        header:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-align: center;
+            color: #f00;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #f00;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        /* Navegación */
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f00;
+            transform: scale(1.1);
+        }
+
+        /* Botones y enlaces */
+        .back-to-top {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #f00;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.3s, background 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background: #900;
+            transform: scale(1.1);
+        }
+
+       /* Secciones */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+    scroll-margin-top: 0; /* Ajusta el margen al desplazarse */
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+    margin-top: 0; /* Elimina el espacio superior */
+    margin-bottom: 0; /* Elimina el espacio inferior */
+}
+
+
+        .section:hover {
+            transform: translateY(-10px);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #f00;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        /* Galería */
+        .carousel img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+
+        .carousel img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Videos */
+        .video-container iframe {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s ease;
+        }
+
+        .video-container iframe:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 0;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            .carousel img {
+                width: 100px;
+            }
+        }
+
+        /* Fondo efecto carrusel */
+        .background-carousel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .background-carousel img {
+            min-width: 100%;
+            min-height: 100%;
+            animation: slide 20s infinite;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100vh; /* Ocupa toda la altura de la pantalla */
+            flex-direction: row;
+        }
+
+        .video-container, .text-container {
+            flex: 1; /* Ocupa todo el ancho disponible */
+            height: 100%;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+        textarea {
+            width: 100%;
+            height: 45%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fondo con efecto carrusel -->
+    
+    <header>
+        <h1>Misa - Death Note</h1>
+    </header>
+
+    <!-- Galería -->
+     <br>
+     <br>
+     <br>
+     <br>
+    <div class="carousel" style="text-align: center;">
+        <marquee behavior="scroll" direction="left" scrollamount="5">
+            <img src="C:\Users\PC\Desktop\diseño\misa\m1.jpg" alt="Inicio de la serie" class="gallery-img" data-target="reseña-akira">
+            <img src="C:\Users\PC\Desktop\diseño\misa\m2.jpg" alt="Akira sintiéndose Dios" class="gallery-img" data-target="reseña-akira">
+            <img src="C:\Users\PC\Desktop\diseño\misa\m3.jpg" alt="L descubre la verdad" class="gallery-img" data-target="reseña-L">
+            <img src="C:\Users\PC\Desktop\diseño\misa\m4.jpg" alt="Comienza la caza de Akira" class="gallery-img" data-target="reseña-akira-vs-L">
+            <img src="C:\Users\PC\Desktop\diseño\misa\m5.jpg" alt="Los Shinigamis observando a Akira" class="gallery-img" data-target="reseña-shinigamis">
+            
+        </marquee>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="#biografia">Biografía</a></li>
+            <li><a href="#imagenes">Enlace</a></li>
+            <li><a href="index.html" class="nav-button">Volver a Principal</a></li>
+        </ul>
+    </nav>
+
+    <section id="biografia">
+        <h2>Biografía</h2>
+        <div class="container">
+            <div class="video-container">
+                <div style="text-align: center; margin: 20px 0;">
+                    <iframe 
+                        width="100%" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/8rjyMTHoew0" 
+                        title="Opening de Death Note" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen 
+                        style="border-radius: 8px;">
+                    </iframe>
+                </div>
+                
+            </div>
+            <div class="text-container">
+                <textarea rows="10" placeholder="Escribe aquí...">
+                    Misa Amane ( en japonés :弥 海砂, Hepburn : Amane Misa ) es un personaje ficticio de la serie de manga Death Note , creada por Tsugumi Ohba y Takeshi Obata . Una modelo famosa , Misa busca a Kira ( Light Yagami ) mientras apoya su causa de "limpiar el mundo del mal" . Usando su propia Death Note, una libreta que le permite a su dueño matar a cualquiera simplemente sabiendo su nombre y rostro que recibió de la Shinigami Rem , Misa hace todo lo que puede para ayudar a Light.
+
+Esto incluye acortar su propia vida restante a la mitad, dos veces, para recibir los ojos de un Shinigami, dándole la capacidad de aprender el nombre de una persona con solo mirar su rostro. Aunque Misa llena el papel tradicional del interés amoroso , su relación con Light es unilateral, ya que la usa simplemente para sus propios beneficios. En la adaptación al anime , Misa tiene la voz de Aya Hirano en japonés y de Shannon Chan-Kent en la versión en inglés. En las adaptaciones de acción real, es interpretada por Erika Toda en las películas, por Fuka Yuduki y Sakura Kiryu en el musical, y por Hinako Sano en el drama televisivo.
+                </textarea>
+            </div>
+        </div>
+    </section>
+   <!-- Links Section -->
+<section id="imagenes" class="section">
+    <div class="container" style="max-width: 900px; margin: auto; font-family: Arial, sans-serif;">
+
+        <h2 style="text-align: center; margin-bottom: 20px;">Enlaces para más contenidos en la web</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+
+             <!-- Enlace 2 -->
+             <img src="C:\Users\PC\Desktop\diseño\misa\m6.jpg" alt="Techopedia" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+             <div style="text-align: left;">
+                 <a href="https://www.techopedia.com/es/death-note-killer-within-fecha-lanzamiento" target="_blank" style="
+                     display: inline-block;
+                     padding: 12px 20px;
+                     background: #3498db;
+                     color: white;
+                     font-size: 1.1rem;
+                     font-weight: bold;
+                     text-decoration: none;
+                     border-radius: 25px;
+                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                     transition: all 0.3s ease-in-out;
+                 ">Artículo en Techopedia</a>
+                 <p style="margin-top: 10px;">Lee un análisis sobre el impacto de Death Note y las teorías detrás de sus personajes y su narrativa.</p>
+             </div>
+        
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Death Note Fans. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
